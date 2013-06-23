@@ -22,10 +22,10 @@
   </MetadataSources>
   <Metadata>
     <MetadataFile FileName="PMUServiceHost.xsd" MetadataType="Schema" ID="06969c84-f0d3-4784-b793-5fc44c53d5f4" SourceId="1" SourceUrl="http://localhost:60956/PMUServiceHost.svc?xsd=xsd2" />
-    <MetadataFile FileName="PMUServiceHost2.xsd" MetadataType="Schema" ID="68f6ebc4-c6c4-4b68-8fb0-9b49a54afe2c" SourceId="1" SourceUrl="http://localhost:60956/PMUServiceHost.svc?xsd=xsd1" />
+    <MetadataFile FileName="PMUServiceHost1.xsd" MetadataType="Schema" ID="b4acab3e-81c5-48e5-8d7c-99ecd3a02b43" SourceId="1" SourceUrl="http://localhost:60956/PMUServiceHost.svc?xsd=xsd0" />
     <MetadataFile FileName="PMUServiceHost.disco" MetadataType="Disco" ID="aaada90d-ee23-4728-a32a-39cd1c667760" SourceId="1" SourceUrl="http://localhost:60956/PMUServiceHost.svc?disco" />
     <MetadataFile FileName="PMUService.wsdl" MetadataType="Wsdl" ID="edb5ac8b-2ad7-4bc3-8906-2fcbe79b9e76" SourceId="1" SourceUrl="http://localhost:60956/PMUServiceHost.svc?wsdl" />
-    <MetadataFile FileName="PMUServiceHost1.xsd" MetadataType="Schema" ID="b4acab3e-81c5-48e5-8d7c-99ecd3a02b43" SourceId="1" SourceUrl="http://localhost:60956/PMUServiceHost.svc?xsd=xsd0" />
+    <MetadataFile FileName="PMUServiceHost2.xsd" MetadataType="Schema" ID="68f6ebc4-c6c4-4b68-8fb0-9b49a54afe2c" SourceId="1" SourceUrl="http://localhost:60956/PMUServiceHost.svc?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

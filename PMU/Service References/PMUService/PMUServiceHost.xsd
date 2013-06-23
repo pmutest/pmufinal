@@ -45,6 +45,16 @@
     <xs:sequence />
   </xs:complexType>
   <xs:element name="PMUServiceDataResult" nillable="true" type="tns:PMUServiceDataResult" />
+  <xs:complexType name="WSString">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PMUServiceDataResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="StringValue" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WSString" nillable="true" type="tns:WSString" />
   <xs:complexType name="WSBoolean">
     <xs:complexContent mixed="false">
       <xs:extension base="tns:PMUServiceDataResult">
@@ -65,16 +75,6 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="WSInteger" nillable="true" type="tns:WSInteger" />
-  <xs:complexType name="WSString">
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:PMUServiceDataResult">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="StringValue" nillable="true" type="xs:string" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="WSString" nillable="true" type="tns:WSString" />
   <xs:complexType name="PMUServiceResult">
     <xs:sequence>
       <xs:element minOccurs="0" name="Data" nillable="true" type="tns:PMUServiceDataResult" />
