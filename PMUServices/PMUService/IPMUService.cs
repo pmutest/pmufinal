@@ -26,9 +26,10 @@ namespace PMU.PMUServices.PMUService.Contracts
 
         [OperationContract]
         [FaultContract(typeof(PMUServiceResult))]
+        //[WebGet()]
         // This web invoke attribute is needed only in case
         // when we want to access this method from java script & jquery
-        [WebInvoke(Method = "POST",BodyStyle = WebMessageBodyStyle.Wrapped,ResponseFormat = WebMessageFormat.Json)]
+        [WebInvoke(Method = "POST", UriTemplate = "IsUserNameExist{userName}", BodyStyle = WebMessageBodyStyle.Wrapped, ResponseFormat = WebMessageFormat.Json, RequestFormat = WebMessageFormat.Json)]
         PMUServiceResult IsUserNameExist(string userName);
     }
 

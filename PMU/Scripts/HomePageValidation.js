@@ -112,6 +112,9 @@ function signUpvalidate() {
     if (!IsValidConfPassword(uConfPwd, signUpConfErrMgArea)) {
         return false;
     }
+    if (!IsPasswordMatch(uPwd,uConfPwd, signUpConfErrMgArea)) {
+        return false;
+    }
     return true;
 }
 
@@ -171,7 +174,16 @@ function IsValidConfPassword(uConfPwd, errMesgArea) {
     }
 }
 
-function IsPasswordMatch(uPwd, uConfPwd) {
+function IsPasswordMatch(uPwd, uConfPwd, errMesgArea) {
+    var showErrMsgSpan = errMesgArea;
+    if (uPwd != uConfPwd) {
+        showErrMsgInSpan = "*Password and confirm password should be same.";
+        displayErrMessage(showErrMsgSpan, showErrMsgInSpan);
+        return false;
+    } else {
+        hideErrMsgArea(showErrMsgSpan);
+        return true;
+    }
 }
 
 function displayErrMessage(mesgBox, errorMesgTxt) {
