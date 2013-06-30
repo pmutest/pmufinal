@@ -65,7 +65,7 @@ namespace PMU.PMUServices.PMUServiceLibrary
             try
             {
                 // Call to business logic layer to check user exist or not
-                IsExist.IntegerValue = PMULoginManager.IsUserAllreadyExist(userName);
+                IsExist.IntegerValue = 1;// PMULoginManager.IsUserAllreadyExist(userName);
                 PMUServiceResultObject.Data = (WSInteger)IsExist;
                 return PMUServiceResultObject;
             }

@@ -77,6 +77,7 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\Home.js" />
     <Content Include="Scripts\HomePageValidation.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-2.0.2-vsdoc.js" />
     <Content Include="Scripts\jquery-2.0.2.js" />
     <Content Include="Scripts\jquery-2.0.2.min.js" />
@@ -93,14 +94,18 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-ui-1.10.3.custom.min.js" />
     <Content Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\ResumeBuilder.js" />
+    <Content Include="SignUp.aspx" />
     <Content Include="Styles\bootstrap-responsive.css" />
     <Content Include="Styles\bootstrap-responsive.min.css" />
     <Content Include="Styles\bootstrap.css" />
     <Content Include="Styles\bootstrap.min.css" />
     <Content Include="Styles\CommonStyle.css" />
+    <Content Include="Styles\jquery-ui-1.10.3.custom.min.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -154,6 +159,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp.aspx.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignUp.aspx.designer.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

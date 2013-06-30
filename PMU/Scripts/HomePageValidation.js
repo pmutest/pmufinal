@@ -196,6 +196,80 @@ function hideErrMsgArea(mesgBox) {
 }
 
 
+//Area to test Json Call to wcf service  
+
+function WCFJSON() {
+    $.support.cors = true;
+    CallService();
+}
+
+// Function to call WCF  Service       
+function CallService() {
+    var uesrid = "nihantanu";
+    $.ajax({
+        url: "http://localhost:60956/PMUServiceHost.svc/IsUserNameExist",
+        dataType: "json",
+        data: '{"userName": "' + uesrid + '"}',
+        type: "POST",
+        cache: false,
+        contentType: "application/json; charset=utf-8",
+        beforeSend: function () {
+        },
+        success: function (data, st) {
+            if (st == 'success') {
+            }
+        },
+        error: function (message) {
+            var jsonFault = JSON.parse(message.responseText);
+            alert(jsonFault.Message);
+        }       
+    });
+}
+
+function ServiceFailed(result) {
+    alert('Service call failed: ' + result.status + '' + result.statusText);
+    Type = null;
+    varUrl = null;
+    Data = null;
+    ContentType = null;
+    DataType = null;
+    ProcessData = null;
+}
+
+function ServiceSucceeded(result) {
+    alert("Hi");
+    //    if (DataType == "json") {
+    //        resultObject = result.GetUserResult;
+
+    //        for (i = 0; i < resultObject.length; i++) {
+    //            alert(resultObject[i]);
+    //        }
+
+    //   }
+
+}
+
+function ServiceFailed(xhr) {
+    alert(xhr.responseText);
+
+    if (xhr.responseText) {
+        var err = xhr.responseText;
+        if (err)
+            error(err);
+        else
+            error({ Message: "Unknown server error." })
+    }
+
+    return;
+}
+
+$(document).ready(
+    function () {
+        WCFJSON();
+    }
+);
+
+
 
 
 
