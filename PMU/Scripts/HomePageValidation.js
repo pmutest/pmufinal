@@ -205,9 +205,9 @@ function WCFJSON() {
 
 // Function to call WCF  Service       
 function CallService() {
-    var uesrid = "nihantanu";
+    var uesrid = "nihantanu";  
     $.ajax({
-        url: "http://localhost:60956/PMUServiceHost.svc/IsUserNameExist",
+        url: "http://192.168.11.129:8098/Service/PMUServiceHost.svc/IsUserNameExist",
         dataType: "json",
         data: '{"userName": "' + uesrid + '"}',
         type: "POST",
@@ -217,12 +217,13 @@ function CallService() {
         },
         success: function (data, st) {
             if (st == 'success') {
+                alert("Success");
             }
         },
         error: function (message) {
             var jsonFault = JSON.parse(message.responseText);
             alert(jsonFault.Message);
-        }       
+        }
     });
 }
 
@@ -238,15 +239,6 @@ function ServiceFailed(result) {
 
 function ServiceSucceeded(result) {
     alert("Hi");
-    //    if (DataType == "json") {
-    //        resultObject = result.GetUserResult;
-
-    //        for (i = 0; i < resultObject.length; i++) {
-    //            alert(resultObject[i]);
-    //        }
-
-    //   }
-
 }
 
 function ServiceFailed(xhr) {
